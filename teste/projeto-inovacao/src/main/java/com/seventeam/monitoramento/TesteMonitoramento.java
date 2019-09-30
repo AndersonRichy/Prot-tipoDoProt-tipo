@@ -7,16 +7,23 @@ package com.seventeam.monitoramento;
 
 import oshi.hardware.platform.windows.WindowsCentralProcessor;
 
+
 /**
  *
  * @author Aluno
  */
 public class TesteMonitoramento {
     
+    private String Processador;
     
     public void Monitor() {   
     
         WindowsCentralProcessor MonitoramentoCPU = new WindowsCentralProcessor();
-        
+        Processador = String.format("%s", MonitoramentoCPU);
     }
+
+    public String getProcessador() {
+        return Processador;
+    }
+    
 }
